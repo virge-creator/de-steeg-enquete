@@ -1,0 +1,50 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="powered">Powered by</span>
+    <a href="https://www.autoleaf.nl" target="_blank" rel="noopener noreferrer">
+      <img
+        src={`${import.meta.env.BASE_URL}images/autoleaf-logo.png`}
+        alt="Autoleaf"
+        width="120"
+        height="26"
+        class="autoleaf-logo"
+      />
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+  }
+
+  .footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .powered {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+
+  .autoleaf-logo {
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+
+  a:hover .autoleaf-logo {
+    opacity: 1;
+  }
+</style>

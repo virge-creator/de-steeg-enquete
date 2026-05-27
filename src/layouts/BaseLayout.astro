@@ -1,0 +1,21 @@
+---
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+---
+
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cannabis usage survey - Coffeeshop De Steeg" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <title>Cannabis Enquête — Coffeeshop De Steeg</title>
+    <script is:inline>
+      const lang = localStorage.getItem('lang') || 'nl';
+      document.documentElement.classList.add('lang-' + lang);
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

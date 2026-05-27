@@ -1,0 +1,27 @@
+{
+  "name": "de-steeg-enquete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virge-creator/de-steeg-enquete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virge-creator/de-steeg-enquete/issues"
+  },
+  "homepage": "https://github.com/virge-creator/de-steeg-enquete#readme",
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@lucide/astro": "^1.16.0",
+    "astro": "^6.3.8"
+  }
+}

@@ -1,0 +1,84 @@
+---
+---
+
+<nav class="lang-switcher" aria-label="Language selector">
+  <button data-lang-btn="nl" type="button" aria-label="Nederlands">
+    <svg viewBox="0 0 36 24" width="28" height="19">
+      <rect width="36" height="8" fill="#AE1C28" />
+      <rect y="8" width="36" height="8" fill="#FFF" />
+      <rect y="16" width="36" height="8" fill="#21468B" />
+    </svg>
+  </button>
+  <button data-lang-btn="en" type="button" aria-label="English">
+    <svg viewBox="0 0 60 30" width="28" height="14">
+      <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+      <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+      <g clip-path="url(#s)">
+        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+        <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+      </g>
+    </svg>
+  </button>
+  <button data-lang-btn="pl" type="button" aria-label="Polski">
+    <svg viewBox="0 0 36 24" width="28" height="19">
+      <rect width="36" height="12" fill="#FFF" />
+      <rect y="12" width="36" height="12" fill="#DC143C" />
+    </svg>
+  </button>
+</nav>
+
+<script>
+  function initLanguageSwitcher() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-lang-btn]');
+    const currentLang = localStorage.getItem('lang') || 'nl';
+
+    buttons.forEach((btn) => {
+      if (btn.dataset.langBtn === currentLang) btn.classList.add('active');
+
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.langBtn!;
+        document.documentElement.className = 'lang-' + lang;
+        localStorage.setItem('lang', lang);
+        buttons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  }
+
+  initLanguageSwitcher();
+</script>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  button {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    transition: border-color 0.15s;
+  }
+
+  button:hover {
+    border-color: var(--color-border);
+  }
+
+  button.active {
+    border-color: var(--color-accent);
+  }
+
+  svg {
+    display: block;
+    border-radius: 2px;
+  }
+</style>

@@ -1,0 +1,68 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { translations, languages } from '../i18n/translations';
+---
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <img
+        src={`${import.meta.env.BASE_URL}images/de-steeg-logo.png`}
+        alt="Coffeeshop De Steeg"
+        width="200"
+        height="80"
+        class="logo"
+      />
+      {languages.map((lang) => (
+        <p class="subtitle" data-lang={lang}>{translations[lang].title}</p>
+      ))}
+    </div>
+    <LanguageSwitcher />
+  </div>
+</header>
+
+<style>
+  .header {
+    background: var(--color-accent);
+    color: #fff;
+    padding: 1.5rem 1rem;
+  }
+
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .logo {
+    width: 160px;
+    height: auto;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.85;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 480px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      width: 140px;
+    }
+  }
+</style>

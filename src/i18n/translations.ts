@@ -6,6 +6,8 @@ export const translations = {
     cta: 'Vul de enquête hieronder in en claim je gratis joint!',
     surveyTitle: 'Enquête',
     surveyLoading: 'Laden…',
+    surveyUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfb4Yt7SXcf4iQzHtUe4-yqntzOUOI3eAbxYFD0PrQKwO6_7w/viewform?embedded=true',
   },
   en: {
     title: 'Cannabis Usage Survey',
@@ -14,6 +16,8 @@ export const translations = {
     cta: 'Fill in the survey below and claim your free joint!',
     surveyTitle: 'Survey',
     surveyLoading: 'Loading…',
+    surveyUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLScbu5cHI7HbATj2DPeZeYGTB_NxVf89EQK4zGNHY_Ts8u_-8A/viewform?embedded=true',
   },
   pl: {
     title: 'Ankieta dotycząca użytkowania konopi',
@@ -22,6 +26,8 @@ export const translations = {
     cta: 'Wypełnij ankietę poniżej i odbierz swojego darmowego jointa!',
     surveyTitle: 'Ankieta',
     surveyLoading: 'Ładowanie…',
+    surveyUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLSePbR_rloXDZgxnYZZhc5AvPqaQG1raiuTz90MwNeORSogumw/viewform?embedded=true',
   },
 } as const;
 

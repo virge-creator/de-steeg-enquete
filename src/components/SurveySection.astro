@@ -8,7 +8,9 @@ import { translations, languages } from '../i18n/translations';
   ))}
   <div class="iframe-wrapper">
     <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdDsHdKqvVRc4o8qNInhW1GNau2Uxv5z0Fe36N7yKoKKlCIVg/viewform?embedded=true"
+      id="survey-frame"
+      src={translations.nl.surveyUrl}
+      data-src={translations.nl.surveyUrl}
       width="100%"
       height="3122"
       frameborder="0"
@@ -20,6 +22,24 @@ import { translations, languages } from '../i18n/translations';
     </iframe>
   </div>
 </section>
+
+<script>
+  import { translations } from '../i18n/translations';
+
+  const iframe = document.getElementById('survey-frame') as HTMLIFrameElement | null;
+
+  function setSurvey(lang: string) {
+    if (!iframe) return;
+    const url = translations[lang as keyof typeof translations]?.surveyUrl;
+    if (url && iframe.dataset.src !== url) {
+      iframe.src = url;
+      iframe.dataset.src = url;
+    }
+  }
+
+  setSurvey(localStorage.getItem('lang') || 'nl');
+  document.addEventListener('langchange', (e) => setSurvey((e as CustomEvent<string>).detail));
+</script>
 
 <style>
   .survey {

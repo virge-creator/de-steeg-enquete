@@ -44,6 +44,7 @@
         localStorage.setItem('lang', lang);
         buttons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
+        document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
       });
     });
   }

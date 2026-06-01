@@ -8,6 +8,7 @@ export const translations = {
     surveyLoading: 'Laden…',
     surveyUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLSfb4Yt7SXcf4iQzHtUe4-yqntzOUOI3eAbxYFD0PrQKwO6_7w/viewform?embedded=true',
+    surveyHeight: 3122,
   },
   en: {
     title: 'Cannabis Usage Survey',
@@ -18,6 +19,7 @@ export const translations = {
     surveyLoading: 'Loading…',
     surveyUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLScbu5cHI7HbATj2DPeZeYGTB_NxVf89EQK4zGNHY_Ts8u_-8A/viewform?embedded=true',
+    surveyHeight: 3550,
   },
   pl: {
     title: 'Ankieta dotycząca użytkowania konopi',
@@ -28,6 +30,7 @@ export const translations = {
     surveyLoading: 'Ładowanie…',
     surveyUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLSePbR_rloXDZgxnYZZhc5AvPqaQG1raiuTz90MwNeORSogumw/viewform?embedded=true',
+    surveyHeight: 3550,
   },
 } as const;
 

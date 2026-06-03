@@ -8,7 +8,7 @@ export const translations = {
     surveyLoading: 'Laden…',
     surveyUrl:
       'https://docs.google.com/forms/d/e/1FAIpQLSfb4Yt7SXcf4iQzHtUe4-yqntzOUOI3eAbxYFD0PrQKwO6_7w/viewform?embedded=true',
-    surveyHeight: 3122,
+    surveyHeight: 3550,
   },
   en: {
     title: 'Cannabis Usage Survey',
